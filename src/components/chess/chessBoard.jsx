@@ -15,6 +15,7 @@ import wR from "./imgs/wR.png";
 import "./style.css";
 const Chessboard = ({ difficulty }) => {
   // Define initial state for the chessboard
+  console.log(difficulty);
   const [board, setBoard] = useState(initializeBoard());
   const [selectedPiece, setSelectedPiece] = useState(null);
   const [currentPlayer, setCurrentPlayer] = useState("black"); // 'white' or 'black'
@@ -107,7 +108,7 @@ const Chessboard = ({ difficulty }) => {
         setCurrentPlayer("black");
       } else {
         setCurrentPlayer("white"); // Switch turn
-        getAIMove(4); // chama a função do minimax com a profundidade definida
+        getAIMove(difficulty + 1); // chama a função do minimax com a profundidade definida
       }
       setSelectedPiece(null);
     }
