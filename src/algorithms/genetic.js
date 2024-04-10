@@ -197,7 +197,7 @@ function pickFromPopulation(
   }
 
   shuffleArray(nextBreeders);
-  while (nextBreeders[0] == nextBreeders[1]) {
+  while (nextBreeders[0] === nextBreeders[1]) {
     shuffleArray(nextBreeders);
   }
 
@@ -310,11 +310,11 @@ function Solver(
   let population = createPopulation(sudoku, populationSize);
   let generations = 0;
 
-  while (numMaxGenerations == null ? true : generations < numMaxGenerations) {
+  while (numMaxGenerations === null ? true : generations < numMaxGenerations) {
     let best = population[0].countRepeatsInRowsAndColumns();
     console.log(best, generations, numMaxGenerations);
 
-    if (best == 0) break;
+    if (best === 0) break;
 
     if (best <= 2)
       population = genetic(

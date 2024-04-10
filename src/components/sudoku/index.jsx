@@ -67,7 +67,7 @@ function Sudoku() {
     const copy = JSON.parse(JSON.stringify(matrix.sudokuInitial));
     let solved;
 
-    if (algorithm == "Simulated") {
+    if (algorithm === "Simulated") {
       let iterationsInput = inputs[0].value;
       let initialTemperature = inputs[1].value;
       let coolingRate = +inputs[2].value;
@@ -167,7 +167,7 @@ function Sudoku() {
             color="green"
             size={16}
           />{" "}
-          {algorithm == "Simulated" ? "Iterações" : "Gerações"}: {iterations}
+          {algorithm === "Simulated" ? "Iterações" : "Gerações"}: {iterations}
         </p>
       </div>
     </div>

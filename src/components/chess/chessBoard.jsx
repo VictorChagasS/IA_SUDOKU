@@ -523,7 +523,6 @@ const Chessboard = ({ difficulty }) => {
           if (piece === "p" || piece === "P") {
             // Se a peça for um peão
             const adjacentFiles = getAdjacentFiles(i, j);
-            const file = String.fromCharCode(97 + j); // Obter a letra da coluna atual (a-h)
 
             // Verificar se o peão é isolado
             const isIsolated = adjacentFiles.every((fileIndex) => {

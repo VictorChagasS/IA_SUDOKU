@@ -177,12 +177,12 @@ function simulated(
   let cost = sudoku.countRepeatsInRowsAndColumns();
 
   let sigma =
-    tempInitial == null ? sudoku.calculateStandardDeviation() : tempInitial;
+    tempInitial === null ? sudoku.calculateStandardDeviation() : tempInitial;
   let iteration = 0;
   let stuck = 0;
 
   while (numInterations === null ? true : iteration < numInterations) {
-    if (cost == 0) break;
+    if (cost === 0) break;
     if (stuck % stuckNum === 0) {
       sigma += stuchHeat;
       stuck = 0;
